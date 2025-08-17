@@ -15,12 +15,11 @@ public class PhishingDetector {
                 break;
             }
         }
-        
 
         if (isPhishing) {
-            System.out.println(" Warning: This URL may be a phishing attempt!Be Aware");
+            System.out.println("⚠️ Warning: This URL may be a phishing attempt! Be Aware");
         } else {
-            System.out.println(" This URL seems safe.");
+            System.out.println("✅ This URL seems safe.");
         }
 
         scanner.close();
