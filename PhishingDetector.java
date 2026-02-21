@@ -1,27 +1,22 @@
-import java.util.Scanner;
+# Phishing URL Detector - Beginner Friendly Python Version
 
-public class PhishingDetector {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String[] phishingKeywords = {"login", "verify", "update", "secure", "account", "bank", "free", "urgent"};
-        System.out.print("Enter the URL to check: ");
-        String url = scanner.nextLine().toLowerCase();
+# List of suspicious phishing keywords
+phishing_keywords = ["login", "verify", "update", "secure", "account", "bank", "free", "urgent"]
 
-        boolean isPhishing = false;
+# Ask user to enter URL
+url = input("Enter the URL to check: ").strip().lower()
 
-        for (String keyword : phishingKeywords) {
-            if (url.contains(keyword)) {
-                isPhishing = true;
-                break;
-            }
-        }
+# Assume safe first
+is_phishing = False
 
-        if (isPhishing) {
-            System.out.println("⚠️ Warning: This URL may be a phishing attempt! Be Aware");
-        } else {
-            System.out.println("✅ This URL seems safe.");
-        }
+# Check if any keyword is in the URL
+for keyword in phishing_keywords:
+    if keyword in url:
+        is_phishing = True
+        break
 
-        scanner.close();
-    }
-}
+# Print result
+if is_phishing:
+    print("⚠️ Warning: This URL may be a phishing attempt! Be aware.")
+else:
+    print("✅ This URL seems safe.")
