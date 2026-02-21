@@ -1,6 +1,6 @@
 # 🎣 Phishing URL Detector
 
-A simple Java program that checks if a URL might be a phishing attempt by scanning for common suspicious keywords.
+A simple python program that checks if a URL might be a phishing attempt by scanning for common suspicious keywords.
 
 ## 🔍 Features
 
@@ -9,8 +9,3 @@ A simple Java program that checks if a URL might be a phishing attempt by scanni
   - `login`, `verify`, `update`, `bank`, `free`, `urgent`, etc.
 - Beginner-friendly and terminal-based interface
 
-## 🚀 How to Run
-
-```bash
-javac PhishingDetector.java
-java PhishingDetector
